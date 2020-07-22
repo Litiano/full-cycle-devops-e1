@@ -13,3 +13,4 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY entrypoint.sh /docker-entrypoint.d/dockerize.sh
 
 #COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY nginx.conf /var/www/.docker/nginx/nginx.conf

@@ -15,6 +15,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN usermod -u 1000 www-data
 USER www-data
+RUN chown -R www-data .
 
 #COPY . /var/www
 

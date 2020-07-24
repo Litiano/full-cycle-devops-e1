@@ -48,7 +48,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=laravel
-      - NTSQK_USER=root
+      - MYSQL_USER=root
     networks:
       - app-network
 networks:

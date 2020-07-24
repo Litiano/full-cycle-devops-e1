@@ -9,7 +9,7 @@ steps:
 
   - id: "Rodando whoami"
     name: 'gcr.io/cloud-builders/docker'
-    args: ['exec', '-t', 'app', 'whoami', '']
+    args: ['exec', '-t', 'app', 'whoami']
 
   - id: "Rodando ls -la"
     name: 'gcr.io/cloud-builders/docker'

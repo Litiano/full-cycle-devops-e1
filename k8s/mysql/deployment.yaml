@@ -20,6 +20,8 @@ spec: #spec do deployment
           args:
             - "--ignore-db-dir=lost+found" #pegadinha na cloud, o volume é criado com uma pasta lost+found
           env:
+            - name: MYSQL_DATABASE
+              value: "laravel"
             - name: MYSQL_ROOT_PASSWORD
               # kubectl create secret generic mysql-pass --from-literal=password='a1s2d3f4'
               valueFrom:

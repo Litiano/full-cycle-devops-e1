@@ -34,3 +34,7 @@ steps:
   - id: "Rodando phpunit"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec', '-t', 'app', 'php', '/var/www/vendor/bin/phpunit', '-c', '/var/www/phpunit.xml']
+
+  - id: "Pushing image"
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
